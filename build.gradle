@@ -1,0 +1,29 @@
+subprojects{
+    apply plugin:'java'
+    group 'com.git.onedayrex'
+    version '1.0-SNAPSHOT'
+
+
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+
+    dependencies {
+        /**日志依赖**/
+        compile "org.apache.logging.log4j:log4j-api:${log_version}"
+        compile "org.apache.logging.log4j:log4j-core:${log_version}"
+        compile "org.slf4j:slf4j-api:${sfl4j_version}"
+        //slf4j 使用 log4j2 实现包
+//        compile "org.apache.logging.log4j:log4j-slf4j-impl:${log_version}"
+        //crawler4j
+        compile "edu.uci.ics:crawler4j:${crawler_version}"
+        // https://mvnrepository.com/artifact/com.sleepycat/je
+        compile group: 'com.sleepycat', name: 'je', version: '18.3.12'
+
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
