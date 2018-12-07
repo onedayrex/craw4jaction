@@ -9,7 +9,7 @@
              <level>WARN</level>
          </filter>-->
         <encoder>
-            <pattern>%d{yy-MM-dd HH🇲🇲ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{yy-MM-dd HH:mm:ss.SSS}[%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
     <!-- 每天备份日志，用压缩打包方式（减少空间暂用，压缩比是10倍左右） -->
